@@ -1,0 +1,74 @@
+ var gCheck = grandSel.attr("num");
+            var lastNum = gCheck - settings.contentWidth;
+
+            if (gCheck == 0) {
+                ul.animate({
+                    "margin-left": "0px",
+                });
+                grandSel.attr("num", "0")
+            } else {
+                ul.animate({
+                    'margin-left' : "-" + lastNum + "px"
+                });
+                grandSel.attr("num", lastNum);
+                page_number = page_number - 1;
+                page_visible = page_visible - 1;
+                countings = countings - 1;
+            }
+			
+			page_number = page_number + 1;
+            page_visible = page_visible + 1;
+            countings = countings + 1;
+            i = main_width * (page_visible);
+            count = countings * 7;
+
+            if (count > img.length) {
+                ul.animate({
+                    "margin-left": "0px",
+                });
+                page_number = 0;
+                page_visible = 0;
+                count = 0;
+                grandSel.attr("num", "0");
+                countings = 0;
+            } else{
+                ul.animate({
+                    "margin-left": "-" + (main_width * (page_number)) + "px",
+                });
+                grandSel.attr("num", i);
+            }
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			 $(".level4").animate({
+            'zoom': 1.2,
+            'margin-top': -15 + "px",
+        });
+
+        $("#banner").html("<img src='img/banner" + 4 + ".png' height='274' width='1024' />");
+
+        $(".level4").hover(function () {
+            $(this).animate({
+                'zoom': 1.2,
+                'margin-top': -15 + "px",
+            });
+        }, function () {
+            $(this).animate({
+                'zoom': 1.2,
+                'margin-top': -15 + "px",
+            });
+            $(this).css("opacity", "10");
+        });
+
+        for (var k = 0; k < img.length; k++) {
+            $(".level" + k).css("opacity", "10");
+            img.not(".level4").css("opacity", "0.3");
+        }

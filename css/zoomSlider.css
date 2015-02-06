@@ -1,0 +1,27 @@
+﻿.container_button {
+    width:1024px;
+    display:block;
+    margin:0 auto;
+}
+
+.shrink_mid {
+    width:60px;
+    margin:0 auto;
+}
+
+.leftButton {
+    background-image:url('../img/previous.png');
+    height:25px;
+    width:25px;
+    float:left;
+    cursor:pointer;
+}
+
+.rightButton {
+    background-image:url('../img/next.png');
+    height:25px;
+    width:25px;
+    float:left;
+    margin-left:10px;
+    cursor:pointer;
+}
